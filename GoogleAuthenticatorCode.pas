@@ -27,8 +27,7 @@ interface
 Uses
 	dateutils,sysutils,
 	HMAC;
-	
-Function GoogleAuthenticatorCode_Gen(secret:string;time:int64):string;overload;
+
 Function GoogleAuthenticatorCode_Gen(secret:string):string;overload;
 Function GoogleAuthenticatorCode_Verfy(const secret,submit:string):boolean;
 Function GoogleAuthenticatorCode_GenerateASecret:string;
@@ -39,7 +38,6 @@ Var
 
 Type
 	Base32Exception_InvalidLetter = Class(Exception);
-	Base32Exception_WithLetterU = Class(Base32Exception_InvalidLetter);
 
 Function Base32_Encode(a:string):string;
 Var
